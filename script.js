@@ -1,4 +1,4 @@
-    //  script.js Fase03
+    //  script.js Fase03 
    
    // Fotos de perfil
     const photos = [
