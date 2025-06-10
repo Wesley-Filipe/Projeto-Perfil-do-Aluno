@@ -1,85 +1,208 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #2e0f4d, #431a72);
+  color: #f0eaff;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #cba0ff;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #9d63d4;
+  padding-bottom: 5px;
+}
+
+p, li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+strong {
+  color: #ffffff;
+}
+
+img {
+  max-width: 200px;
+  border-radius: 100%;
+  border: 4px solid #9d63d4;
+  display: block;
+  margin: 15px auto 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  list-style: square inside;
+  padding-left: 0;
+}
+
+a {
+  color: #c38bff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+i.fab {
+  color: #cba0ff;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+a:hover i.fab {
+  color: #ffffff;
+}
+
+/* Estilo para campos de digitação */
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 10px 0;
+  border: 1px solid #9d63d4;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #f0eaff;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #cba0ff;
+  outline: none;
+}
+
+/* Layout em tabela */
+table.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+}
+.profile-table th,
+.profile-table td {
+  border: 1px solid #9d63d4;
+  padding: 12px 15px;
+  text-align: center;
+}
+.profile-table th {
+  background-color: rgba(155, 99, 212, 0.3);
+  color: #f0eaff;
+  font-size: 1.2rem;
+}
+
+/* Galeria com botões ao lado da imagem */
+#gallery {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 20px;
+}
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #9d63d4;
+  color: #f0eaff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.nav-btn:hover {
+  background: #cba0ff;
+}
+#prevBtn {
+  left: -16px;
+}
+#nextBtn {
+  right: -16px;
+}
+
+#addUcBtn, #editPersonalBtn {
+  background: #9d63d4;
+  color: #f0eaff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+#addUcBtn:hover, #editPersonalBtn:hover {
+  background: #cba0ff;
+}
+
+/* Botões de mover UCs */
+.up-btn, .down-btn {
+  background: #9d63d4;
+  color: #f0eaff;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 5px;
+}
+.up-btn:hover, .down-btn:hover {
+  background: #cba0ff;
+}
+
+.profile-table td[colspan="2"] a {
+  margin: 0 15px;
+}
+
+@media (min-width: 768px) {
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #2e0f4d, #431a72);
-    color: #f0eaff;
-    padding: 40px 20px;
-    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
   }
-  
-  h1, h2 {
-    color: #cba0ff;
-    margin-bottom: 10px;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  h2 {
-    margin-top: 40px;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #9d63d4;
-    padding-bottom: 5px;
-  }
-  
-  p, li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-  }
-  
-  strong {
-    color: #ffffff;
-  }
-  
-  img {
-    max-width: 200px;
-    border-radius: 100%;
-    border: 4px solid #9d63d4;
-    display: block;
-    margin: 0 auto 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  ul {
-    list-style: square inside;
-    padding-left: 0;
-  }
-  
-  a {
-    color: #c38bff;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  a:hover {
-    color: #ffffff;
-  }
-  
-  i.fab {
-    margin-right: 8px;
-    color: #cba0ff;
+  /* ajuste responsivo dos botões */
+  .nav-btn {
+    width: 30px;
+    height: 30px;
     font-size: 1.2rem;
-    transition: color 0.3s ease;
   }
-  
-  a:hover i.fab {
-    color: #ffffff;
+  #prevBtn {
+    left: -45px;
   }
-  
-  @media (min-width: 768px) {
-    body {
-      max-width: 800px;
-      margin: auto;
-    }
+  #nextBtn {
+    right: -45px;
   }
-  
+  .up-btn, .down-btn {
+    width: 22px;
+    height: 22px;
+    font-size: 0.9rem;
+  }
+}
