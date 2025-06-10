@@ -1,4 +1,4 @@
-    //  Arquivo JS Fase03 
+    //  Arquivo JS fase03 
    
    // Fotos de perfil
     const photos = [
