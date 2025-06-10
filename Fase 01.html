@@ -1,41 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil do Aluno</title>
     
-    <link rel="stylesheet" href="Fase02.css">
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Aluno</title>
+  <link rel="stylesheet" href="Fase02.css">
 </head>
 <body>
-    <h1>Perfil do Aluno</h1>
-<p><img src="https://i.ibb.co/60zXWsC8/290569328-585508423192478-904275.png" alt="Foto de Perfil" /></p>
-<p><strong>Nome Completo:</strong> Wesley Filipe da Silva</p>
-<p><strong>RA:</strong> 321219499</p>
-<p><strong>Curso e Período Atual:</strong> Ciências da Computação - 8º Semestre</p>
-<p><strong>Endereço Completo:</strong> Rua Tunísia, 411 - Belo Horizonte, Minas Gerais</p>
-<p><strong>E-mail:</strong> wesleyfilipe.pessoal@gmail.com</p>
-<h2>UCs já cursadas</h2>
-<ul>
-<li>Ambientes computacionais e conectividade</li>
-<li>Análise de dados e big data</li>
-<li>Computação gráfica e realidade virtual</li>
-<li>Estruturas de dados e análise de algoritmos</li>
-<li>Estruturas matemáticas</li>
-<li>Gestão e qualidade de software</li>
-<li>Inovação, sustentabilidade e competitividade empresarial</li>
-<li>Inteligência artificial</li>
-<li>Modelagem de software</li>
-<li>Modelos, métodos e técnicas da engenharia de software</li>
-<li>Programação de soluções computacionais</li>
-<li>Sistemas computacionais e segurança</li>
-<li>Teoria da computação e compiladores</li>
-</ul>
-<h2>Perfil Pessoal</h2>
-<p>Sou uma pessoa apaixonada por tecnologia e entretenimento. Gosto de jogar, consertar eletrônicos e passar o tempo com amigos, seja saindo ou apenas jogando conversa fora. Também curto assistir séries e filmes sempre que tenho um tempo livre. Tenho dois irmãos, uma irmã e um irmão, e atualmente ainda moro com meus pais, mas estou me planejando para comprar meu próprio apartamento. No dia a dia, procuro manter um estilo de vida ativo, praticando corrida e frequentando a academia.</p>
-<h2>Perfil Profissional/Acadêmico</h2>
-<p>Atualmente, estou no 8º período do curso de Ciências da Computação, onde tive a oportunidade de adquirir uma base sólida de conhecimento na área. Para complementar minha formação, realizei diversos cursos de extensão, tanto para cumprir as horas complementares quanto para aprofundar minha afinidade com a área. Embora ainda não tenha atuado profissionalmente no setor de tecnologia, sempre busquei aplicar meus conhecimentos em projetos próprios. Além disso, tomei a decisão de empreender e, há quase dois anos, iniciei meu próprio negócio. Esse processo tem sido um grande aprendizado, desafiador e enriquecedor, permitindo-me desenvolver habilidades tanto técnicas quanto de gestão. Estou em constante evolução e motivado para crescer ainda mais profissionalmente.</p>
-<h2>Redes Sociais</h2>
-<p><a href="https://github.com/Wesley-Filipe" target="_blank">GitHub</a></p>
-<p><a href="https://www.instagram.com/wesleyspilar/" target="_blank">Instagram</a></p>
+  <h1>Perfil do Aluno</h1>
+  <table class="profile-table">
+    <!-- Fotos estilo e-commerce -->
+    <tr><th colspan="2">Foto de Perfil</th></tr>
+    <tr>
+      <td colspan="2">
+        <div id="gallery">
+          <button id="prevBtn" class="nav-btn" aria-label="Foto anterior">&lsaquo;</button>
+          <img id="mainImage" src="https://i.ibb.co/60zXWsC8/290569328-585508423192478-904275.png" alt="Foto de Perfil">
+          <button id="nextBtn" class="nav-btn" aria-label="Próxima foto">&rsaquo;</button>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Dados do Perfil -->
+    <tr><td><strong>Nome Completo:</strong></td><td>Wesley Filipe da Silva</td></tr>
+    <tr><td><strong>RA:</strong></td><td>321219499</td></tr>
+    <tr><td><strong>Curso e Período Atual:</strong></td><td>Ciências da Computação - 8º Semestre</td></tr>
+    <tr><td><strong>Endereço Completo:</strong></td><td>Rua Tunísia, 411 - Belo Horizonte, Minas Gerais</td></tr>
+    <tr><td><strong>E-mail:</strong></td><td><input type="email" id="emailInput" value="wesleyfilipe.pessoal@gmail.com"></td></tr>
+    <tr><td><strong>CPF:</strong></td><td><input type="text" id="cpfInput" placeholder="000.000.000-00"></td></tr>
+
+    <!-- UCs -->
+    <tr><th colspan="2">UCs já cursadas</th></tr>
+    <tr><td colspan="2">
+      <ul id="ucList">
+        <li>Ambientes computacionais e conectividade <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Análise de dados e big data <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Computação gráfica e realidade virtual <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Estruturas de dados e análise de algoritmos <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Estruturas matemáticas <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Gestão e qualidade de software <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Inovação, sustentabilidade e competitividade empresarial <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Inteligência artificial <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Modelagem de software <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Modelos, métodos e técnicas da engenharia de software <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Programação de soluções computacionais <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Sistemas computacionais e segurança <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+        <li>Teoria da computação e compiladores <button class="up-btn">↑</button><button class="down-btn">↓</button></li>
+      </ul>
+      <button id="addUcBtn">Adicionar UC</button>
+    </td></tr>
+
+    <!-- Perfil Pessoal -->
+    <tr><th colspan="2">Perfil Pessoal</th></tr>
+    <tr><td colspan="2">
+      <div id="personalProfile">Sou uma pessoa apaixonada por tecnologia e entretenimento. Gosto de jogar, consertar eletrônicos e passar o tempo com amigos, seja saindo ou apenas jogando conversa fora. Também curto assistir séries e filmes sempre que tenho um tempo livre. Tenho dois irmãos, uma irmã e um irmão, e atualmente ainda moro com meus pais, mas estou me planejando para comprar meu próprio apartamento. No dia a dia, procuro manter um estilo de vida ativo, praticando corrida e frequentando a academia.</div>
+      <button id="editPersonalBtn">Editar Perfil Pessoal</button>
+    </td></tr>
+
+    <!-- Perfil Profissional/Acadêmico -->
+    <tr><th colspan="2">Perfil Profissional/Acadêmico</th></tr>
+    <tr><td colspan="2">
+      <div id="professionalProfile">Atualmente, estou no 8º período do curso de Ciências da Computação, onde tive a oportunidade de adquirir uma base sólida de conhecimento na área. Para complementar minha formação, realizei diversos cursos de extensão, tanto para cumprir as horas complementares quanto para aprofundar minha afinidade com a área. Embora ainda não tenha atuado profissionalmente no setor de tecnologia, sempre busquei aplicar meus conhecimentos em projetos próprios. Além disso, tomei a decisão de empreender e, há quase dois anos, iniciei meu próprio negócio. Esse processo tem sido um grande aprendizado, desafiador e enriquecedor, permitindo-me desenvolver habilidades tanto técnicas quanto de gestão. Estou em constante evolução e motivado para crescer ainda mais profissionalmente.</div>
+    </td></tr>
+
+    <!-- Redes Sociais -->
+    <tr><th colspan="2">Redes Sociais</th></tr>
+    <tr><td colspan="2">
+      <p><a href="https://github.com/Wesley-Filipe" target="_blank">GitHub</a></p>
+      <p><a href="https://www.instagram.com/wesleyspilar/" target="_blank">Instagram</a></p>
+    </td></tr>
+  </table>
+
+    <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
